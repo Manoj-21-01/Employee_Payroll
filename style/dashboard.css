@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 10px 50px 10px;
+    display: flex;
+}
+
+#data {
+    color: darkgreen;
+}
+
+.bgc {
+    background-color: #f4f4f4;
+}
+
+.content {
+    position: relative;
+    padding: 15px 50px 20px;
+}
+
+#adduser {
+    position: absolute;
+    text-align: right;
+    right: 100px;
+    background-color: lightgreen;
+    border-radius: 4px;
+    padding: 0px 15px;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    background-color: #42515F;
+    color: white;
+}
+
+#name {
+    padding: 30px;
+}
+
+#gender {
+    padding: 30px;
+}
+
+#dept {
+    padding: 30px;
+}
+
+#salary {
+    padding: 30px;
+}
+
+#date {
+    padding: 30px;
+}
+
+#actions {
+    padding: 30px;
+}
