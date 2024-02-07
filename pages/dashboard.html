@@ -3,38 +3,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Employee Payroll</title>
     <link rel="stylesheet" href="/style/dashboard.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <img src="/assests/logo.png" alt="logo" id="logo" width="40px">
-        <p id="data">EMPLOYEE<br>PAYROLL</p>
+    <div class="top-box ">
+        <div class="header">
+            <img src="/assests/logo.png" alt="logo" width="50px" height="50px">
+            <p id="data">EMPLOYEE<br>PAYROLL</p>
+        </div>
     </div>
-<div class="bgc">
-    <div class="content">
-        <text>Employee Details</text>
-        <text id="adduser">+ Add User</text>
-    </div>
-    <div class="box">
-        <div class="data">
-            <div class="name">
-                <p id="name">NAME</p>
+    <div class="bgc">
+        <div class="d-flex flex-column justify-content-center text-start">
+            <div class="middle-box">
+                <div class="middle-box1 flex-row justify-content-center text-start">
+                    <p class="emp"><b>Employee Details</b></p>
+                    <div class="icon d-flex flex-row justify-content-center text-start">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    <p class="user">+ Add User</p>
+                </div>
             </div>
-            <div class="gender">
-                <p id="gender">GENDER</p>
-            </div>
-            <div class="department">
-                <p id="dept">DEPARTMENT</p>
-            </div>
-            <div class="salary">
-                <p id="salary">SALARY</p>
-            </div>
-            <div class="date">
-                <p id="date">START DATE</p>
-            </div>
-            <div class="actions">
-                <p id="actions">ACTIONS</p>
+            <div class="box d-flex flex-column justify-content-center text-start">
+                <div class="middle-main1 d-flex flex-row justify-content-column text-start">
+                    <P class="names">NAME</P>
+                    <P class="details1">GENDER </P>
+                    <p class="details1">DEPARTMENT</p>
+                    <p class="details1">SALARY</p>
+                    <P class="details1">STARTDATE</P>
+                    <P class="details1">ACTIONS</P>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="middle-main">
+                    <p class="names">Amarpa Shashanka</p>
+                    <p class="details">Female</p>
+                    <div class="dept d-flex flex-row justify-content-center text-center">
+                        <input class="button2" value="Sales">
+                        <input class="button1" value="HR">
+                        <input class="button" value="Finance">
+                    </div>
+                    <p class="sal">10,000</p>
+                    <p class="date">29 Oct 2019</p>
+                    <div class="action d-flex flex-row justify-content-center text-start">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        <span style="padding-left: 10px;">
+                            <i class="ri-pencil-line"></i>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
