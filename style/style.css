@@ -52,16 +52,16 @@
 }
 
 
-#dept {
+.dept {
     padding-right: 21px;
     
 }
 
-#salary {
+.salary {
     padding-right: 55px;
 }
 
-#date {
+.date {
     padding-right: 32px;
 }
 
