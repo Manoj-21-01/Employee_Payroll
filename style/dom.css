@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.center{
+    padding-top: 5%;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+/* .animation {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+} */
