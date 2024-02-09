@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": "6fb4",
+      "Name": "Manoj",
+      "Gender": "male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-23",
+      "Notes": "First note sending to the local host and saving it using ajax."
+    },
+    {
+      "id": "25f2",
+      "Name": "Manoj Veluru",
+      "Gender": "male",
+      "Department": [
+        "Finance"
+      ],
+      "Salary": "30k",
+      "Start_Date": "2024-02-09",
+      "Notes": "Note"
+    },
+    {
+      "id": "1aef",
+      "Name": "manoj",
+      "Gender": "male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-09",
+      "Notes": "notes"
+    },
+    {
+      "id": "5de3",
+      "Name": "manoj",
+      "Gender": "male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-09",
+      "Notes": "notes"
+    },
+    {
+      "id": "ce87",
+      "Name": "nani",
+      "Gender": "male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-21",
+      "Notes": "notes"
+    },
+    {
+      "id": "dfa2",
+      "Name": "lalith",
+      "Gender": "male",
+      "Department": [
+        "Engineer"
+      ],
+      "Salary": "50k",
+      "Start_Date": "2024-03-07",
+      "Notes": "notes"
+    }
+  ]
+}
