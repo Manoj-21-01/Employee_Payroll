@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Employee Payroll</title>
     <link rel="stylesheet" href="/style/dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -30,15 +31,19 @@
                 </div>
             </div>
             <div class="box d-flex flex-column justify-content-center text-start">
-                <div class="middle-main1 d-flex flex-row justify-content-column text-start">
-                    <P class="names1">NAME</P>
-                    <P class="details1">GENDER </P>
-                    <p class="details1">DEPARTMENT</p>
-                    <p class="details1">SALARY</p>
-                    <P class="details1">STARTDATE</P>
-                    <P class="details1">ACTIONS</P>
+                <!-- <div class="middle-main1 d-flex flex-row justify-content-column text-start"> -->
+                    <table class="table" id="table">
+                        <thead class="table1">
+                            <th>NAME</th>
+                            <th>GENDER</th>
+                            <th>DEPARTMENT</th>
+                            <th>SALARY</th>
+                            <th>STARTDATE</th>
+                            <th>ACTIONS</th>
+                        </thead>
+                    </table>
                 </div>
-                <div class="middle-main">
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4sKLKw2NRQTZgWlMgy6ZlBrY9TTTr1zMObLZeV73vQ&s" alt="women_img_1" class="profileicon" style="clip-path: circle(); ">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -55,8 +60,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaVKbSa1QadC1GsXFwQML4kK6JxihiQ4_2n602HKUnQ&s" alt="men_image_1" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -73,8 +78,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJIVAovygeD6z08kn_Rl4fY9vKjJ_Re8ExMeoNZ6yQQ&s" alt="women_img_2" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -91,8 +96,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnKAIHy-tNtoCdJDhEBAlvt5JDSpIkTfZbHKxuT8-6g&s" alt="men_img_2" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -109,8 +114,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4sKLKw2NRQTZgWlMgy6ZlBrY9TTTr1zMObLZeV73vQ&s" alt="women_img_1" class="profileicon" style="clip-path: circle(); ">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -127,8 +132,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaVKbSa1QadC1GsXFwQML4kK6JxihiQ4_2n602HKUnQ&s" alt="men_image_1" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -145,8 +150,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJIVAovygeD6z08kn_Rl4fY9vKjJ_Re8ExMeoNZ6yQQ&s" alt="women_img_2" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -163,8 +168,8 @@
                             <i class="ri-pencil-line"></i>
                         </span>
                     </div>
-                </div>
-                <div class="middle-main">
+                </div> -->
+                <!-- <div class="middle-main">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnKAIHy-tNtoCdJDhEBAlvt5JDSpIkTfZbHKxuT8-6g&s" alt="men_img_2" class="profileicon" style="clip-path: circle();">
                     <p class="names">Amarpa Shashanka</p>
                     <p class="details">Female</p>
@@ -180,9 +185,11 @@
                         <span style="padding-left: 10px;">
                             <i class="ri-pencil-line"></i>
                         </span>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>
+    
+    <script src="../scripts/dashboard.js"></script>
 </body>

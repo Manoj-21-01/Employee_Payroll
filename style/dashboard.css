@@ -78,6 +78,18 @@
     background-color: #42515F;
     color: white;
 }
+
+.table {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.table1 {
+    color: white;
+    background-color: #3d3d3d;
+}
 .names1{
     padding-left: 5%;
 }

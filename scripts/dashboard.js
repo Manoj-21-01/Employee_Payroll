@@ -10,14 +10,18 @@ function f1(){
     
     let salary = $("#salary").val();   
     let start_date = $("#date").val();
+
+    let action1 = $("action1").attr('class');
+
     let notes = $("#notes").val();
 
     const data = {
         Name: name,
-        Gender: gender ? "male" : "female",
+        Gender: gender ? "Male" : "Female",
         Department: [],
         Salary: salary,
         Start_Date: start_date,
+        deleteIcon: action1,
         Notes: notes
     }
     let dept_values = []
@@ -59,3 +63,24 @@ $('#submit').click(function (event) {
     f1(); 
 });
 
+//GET Method
+$(document).ready(function() {
+        $.ajax({
+            url: 'http://localhost:3000/data',
+            type: 'GET',        
+            success: function(data) {
+                console.log(data);
+                data.forEach(function(employee){
+                    //let deleteIcon = <i class="ri-delete-bin-5-fill" id="action1"></i>
+                    var newRow = "<tr><td>" + employee.Name + "</td><td>" 
+                    + employee.Gender + "</td><td>" + employee.Department + "</td><td>" + 
+                    employee.Salary + "</td><td>" + employee.Start_Date 
+                    + "</td><td>" + employee.deleteIcon + "</td></tr>"
+                    $("#table").append(newRow);
+                })
+              },
+            error: function(xhr, status, error) {
+                console.error('Error fetching data:', error);
+            }
+        });
+});
