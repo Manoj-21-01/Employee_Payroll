@@ -38,6 +38,8 @@ function f1(){
     }
     data.Department = dept_values;
     console.log(data);
+
+    //POST Method
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/data', 
