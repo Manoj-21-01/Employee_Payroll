@@ -1,94 +1,38 @@
 {
   "data": [
     {
-      "id": "5de3",
-      "Name": "manoj",
-      "Gender": "male",
-      "Department": [
-        "HR"
-      ],
-      "Salary": "40k",
-      "Start_Date": "2024-02-09",
-      "Notes": "notes"
-    },
-    {
-      "id": "ce87",
-      "Name": "nani",
-      "Gender": "male",
-      "Department": [
-        "HR"
-      ],
-      "Salary": "40k",
-      "Start_Date": "2024-02-21",
-      "Notes": "notes"
-    },
-    {
-      "id": "dfa2",
+      "id": "f8ce",
       "Name": "lalith",
-      "Gender": "male",
+      "Gender": "Male",
       "Department": [
         "Engineer"
       ],
       "Salary": "50k",
-      "Start_Date": "2024-03-07",
-      "Notes": "notes"
+      "Start_Date": "2024-03-02",
+      "Notes": "Notes hello this is lalith"
     },
     {
-      "id": "6a70",
-      "Name": "Manoj",
-      "Gender": "male",
+      "id": "db3b",
+      "Name": "Punith",
+      "Gender": "Male",
       "Department": [
         "HR"
       ],
       "Salary": "30k",
-      "Start_Date": "2024-02-27",
-      "Notes": "First note sending to the local host and saving it using ajax."
+      "Start_Date": "2024-03-05",
+      "Notes": "notes"
     },
     {
-      "id": "0dd3",
-      "Name": "Manikanta",
-      "Gender": "male",
+      "id": "e0a1",
+      "Name": "Harshit",
+      "Gender": "Male",
       "Department": [
-        "Sales",
         "Finance",
         "Engineer"
       ],
-      "Salary": "40k",
-      "Start_Date": "2024-02-29",
-      "Notes": "Notes hello this is manikanta"
-    },
-    {
-      "id": "3d9a",
-      "Name": "Harshit",
-      "Gender": "male",
-      "Department": [
-        "HR"
-      ],
-      "Salary": "60k",
-      "Start_Date": "2024-02-10",
-      "Notes": "Note"
-    },
-    {
-      "id": "a379",
-      "Name": "Punith",
-      "Gender": "male",
-      "Department": [
-        "HR"
-      ],
       "Salary": "50k",
-      "Start_Date": "2024-03-07",
+      "Start_Date": "2024-02-20",
       "Notes": "Note"
-    },
-    {
-      "id": "ed90",
-      "Name": "Manoj",
-      "Gender": "Male",
-      "Department": [
-        "Finance"
-      ],
-      "Salary": "50k",
-      "Start_Date": "2024-02-26",
-      "Notes": "First note sending to the local host and saving it using ajax."
     }
   ]
 }

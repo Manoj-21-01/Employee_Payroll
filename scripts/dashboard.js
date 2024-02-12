@@ -1,4 +1,10 @@
-function f1(){
+
+$('#submit').click(function () {
+        f1();
+        window.location.href="dashboard.html";
+    
+    });
+    function f1(){
     let name = $("#name").val();
     let gender = $("#male").is(':checked');
 
@@ -19,7 +25,7 @@ function f1(){
         Department: [],
         Salary: salary,
         Start_Date: start_date,
-        deleteIcon: action1,
+        // deleteIcon: action1,
         Notes: notes
     }
     let dept_values = []
@@ -56,40 +62,35 @@ function f1(){
     });
 }
 
-$('#submit').click(function (event) {
-    event.preventDefault();
-    f1(); 
-});
-
 //GET Method
-$(document).ready(function() {
-        $.ajax({
-            url: 'http://localhost:3000/data',
-            type: 'GET',        
-            success: function(data) {
-                console.log(data);
-                data.forEach(function(employee){
-                    var newRow = "<tr><td>" + employee.Name + "</td><td>" 
+$(document).ready(function(){
+    $.ajax({
+        url: 'http://localhost:3000/data',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            data.forEach(function(employee) {                
+                var newRow = "<tr><td>" + employee.Name + "</td><td>" 
                     + employee.Gender + "</td><td>" + employee.Department + "</td><td>" + 
                     employee.Salary + "</td><td>" + employee.Start_Date 
                     + "</td><td> <img src='/assests/delete.jpg' alt='Delete' class='delete' width='30px' data-id='" 
                     + employee.id + "'> <img src='/assests/pencil.png' alt='edit' class='edit' width='30px' data-id='" 
                     + employee.id + "'> </td></tr>";
                     $("#table").append(newRow);
-                    $('#table').on('mouseover', '.delete', function() {
-                        $(this).css('cursor', 'pointer');
-                        $(this).fadeTo('fast', 0.7);
-                    });
-                    $('#table').on('mouseout', '.delete', function() {
-                        $(this).fadeTo('fast', 1); 
-                    });
-                })
-              },
-            error: function(xhr, status, error) {
-                console.error('Error fetching data:', error);
-            }
-        });
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error(xhr.responseText);
+        }
+    });
 });
+$('#table').on('mouseover', '.delete', function() {
+    $(this).css('cursor', 'pointer');
+    $(this).fadeTo('fast', 0.7);
+});
+$('#table').on('mouseout', '.delete', function() {
+    $(this).fadeTo('fast', 1); 
+});             
 
 //DELETE Method
 
