@@ -11,8 +11,6 @@ function f1(){
     let salary = $("#salary").val();   
     let start_date = $("#date").val();
 
-    let action1 = $("action1").attr('class');
-
     let notes = $("#notes").val();
 
     const data = {
@@ -71,16 +69,81 @@ $(document).ready(function() {
             success: function(data) {
                 console.log(data);
                 data.forEach(function(employee){
-                    //let deleteIcon = <i class="ri-delete-bin-5-fill" id="action1"></i>
                     var newRow = "<tr><td>" + employee.Name + "</td><td>" 
                     + employee.Gender + "</td><td>" + employee.Department + "</td><td>" + 
                     employee.Salary + "</td><td>" + employee.Start_Date 
-                    + "</td><td>" + employee.deleteIcon + "</td></tr>"
+                    + "</td><td> <img src='/assests/delete.jpg' alt='Delete' class='delete' width='30px' data-id='" 
+                    + employee.id + "'> <img src='/assests/pencil.png' alt='edit' class='edit' width='30px' data-id='" 
+                    + employee.id + "'> </td></tr>";
                     $("#table").append(newRow);
+                    $('#table').on('mouseover', '.delete', function() {
+                        $(this).css('cursor', 'pointer');
+                        $(this).fadeTo('fast', 0.7);
+                    });
+                    $('#table').on('mouseout', '.delete', function() {
+                        $(this).fadeTo('fast', 1); 
+                    });
                 })
               },
             error: function(xhr, status, error) {
                 console.error('Error fetching data:', error);
             }
         });
+});
+
+//DELETE Method
+
+$('#table').on('click', '.delete', function() {
+    var employeeId = $(this).data('id');
+    var $row = $(this).closest('tr');
+
+    $.ajax({
+        url: 'http://localhost:3000/data/' + employeeId,
+        type: 'DELETE',
+        success: function(response) {
+            console.log('Item deleted successfully:', response);
+            $row.remove();
+        },
+        error: function(xhr, status, error) {
+            console.error('Error deleting item:', xhr.responseText);
+        }
+    });
+});
+
+//UPDATE Method
+$(document).ready(function() {
+    $('#table').submit(function() {
+        var formData = $(this).serialize();
+        var $updateRow = $(this).closest('tr');
+        $.ajax({
+            url: 'http://localhost:3000/data/' + employeeId,
+            type: 'PUT',
+            data: formData,
+            success: function(response) {
+                console.log('Employee data updated successfully:', response);
+                $updateRow.response();
+            }
+        });
+    });
+
+
+    $('#table').on('click', '.edit', function() {
+        var employeeId = $(this).data('id');
+        $.ajax({
+            url: 'http://localhost:3000/data/' + employeeId,
+            type: 'GET',
+            success: function(employee) {
+                populateForm(employee); 
+                $('#table').data('id', employeeId);
+            }
+        });
+    });
+
+    function populateForm(employee) {
+        $('#name').val(employee.Name);
+        $('#male').val(employee.Gender);
+        $('#department').val(employee.Department);
+        $('#salary').val(employee.Salary);
+        $('#date').val(employee.Start_Date);
+    }
 });
