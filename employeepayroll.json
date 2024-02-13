@@ -1,18 +1,6 @@
 {
   "data": [
     {
-      "id": "e11f",
-      "Name": "lalith",
-      "Gender": "Female",
-      "Department": [
-        "Finance"
-      ],
-      "Salary": "60k",
-      "Start_Date": "2024-03-07",
-      "Notes": ""
-    },
-    {
-      "id": "2f56",
       "Name": "harshit",
       "Gender": "Male",
       "Department": [
@@ -20,7 +8,8 @@
       ],
       "Salary": "40k",
       "Start_Date": "2024-02-28",
-      "Notes": ""
+      "Notes": "Note",
+      "id": "2f56"
     },
     {
       "id": "b92d",
@@ -32,6 +21,28 @@
       "Salary": "30k",
       "Start_Date": "2024-03-06",
       "Notes": "Note"
+    },
+    {
+      "Name": "manoj nani",
+      "Gender": "Male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "30k",
+      "Start_Date": "2024-02-20",
+      "Notes": "Note",
+      "id": "b03b"
+    },
+    {
+      "id": "050c",
+      "Name": "Manikanta",
+      "Gender": "Male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "60k",
+      "Start_Date": "2024-02-07",
+      "Notes": "notes"
     }
   ]
 }
