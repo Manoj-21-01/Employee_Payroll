@@ -43,6 +43,17 @@
       "Salary": "60k",
       "Start_Date": "2024-02-07",
       "Notes": "notes"
+    },
+    {
+      "id": "e9a8",
+      "Name": "punith",
+      "Gender": "Male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-13",
+      "Notes": "Note"
     }
   ]
 }

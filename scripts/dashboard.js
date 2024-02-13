@@ -1,6 +1,7 @@
 function f1() {
     let name = $("#name").val();
     let gender = $("#male").is(':checked');
+    let prof = $("input[name='profile']:checked").val();
     let dept1 = $("#dept1").is(':checked');
     let dept2 = $("#dept2").is(':checked');
     let dept3 = $("#dept3").is(':checked');
@@ -13,6 +14,7 @@ function f1() {
     const data = {
         Name: name,
         Gender: gender ? "Male" : "Female",
+        Profile: prof,
         Department: [],
         Salary: salary,
         Start_Date: start_date,
@@ -30,6 +32,10 @@ function f1() {
     //POST and PUT Method
     var urlParams = new URLSearchParams(window.location.search);
     var editId = urlParams.get("id");
+
+    var checkName = $("#name").val();
+    var nameRegex = /^[a-zA-Z ]{3,}$/;
+if (nameRegex.test(checkName)){
     $.ajax({
         url: editId ? "http://localhost:3000/data/" + editId : "http://localhost:3000/data",
         method: editId ? 'PUT' : 'POST',
@@ -44,6 +50,9 @@ function f1() {
             console.log("Server response:", xhr.responseText);
         }
     });
+} else {
+    alert("Please enter a name with atleast 3 characters");
+}
 }
 
 $(document).ready(function () {
@@ -76,7 +85,7 @@ $(document).ready(function(){
         type: 'GET',
         dataType: 'json',
         success: function(data) {
-            data.forEach(function(employee) {                
+            data.forEach(function(employee) { //<img src='" + employee.Profile + "'>
                 var newRow = "<tr><td>" + employee.Name + "</td><td>" 
                     + employee.Gender + "</td><td>" + employee.Department + "</td><td>" + 
                     employee.Salary + "</td><td>" + employee.Start_Date 
