@@ -1,4 +1,3 @@
-
 $('#submit').click(function () {
         f1();
         window.location.href="dashboard.html";
@@ -25,7 +24,6 @@ $('#submit').click(function () {
         Department: [],
         Salary: salary,
         Start_Date: start_date,
-        // deleteIcon: action1,
         Notes: notes
     }
     let dept_values = []
@@ -83,14 +81,7 @@ $(document).ready(function(){
             console.error(xhr.responseText);
         }
     });
-});
-$('#table').on('mouseover', '.delete', function() {
-    $(this).css('cursor', 'pointer');
-    $(this).fadeTo('fast', 0.7);
-});
-$('#table').on('mouseout', '.delete', function() {
-    $(this).fadeTo('fast', 1); 
-});             
+});          
 
 //DELETE Method
 
@@ -111,40 +102,67 @@ $('#table').on('click', '.delete', function() {
     });
 });
 
-//UPDATE Method
-$(document).ready(function() {
-    $('#table').submit(function() {
-        var formData = $(this).serialize();
-        var $updateRow = $(this).closest('tr');
-        $.ajax({
-            url: 'http://localhost:3000/data/' + employeeId,
-            type: 'PUT',
-            data: formData,
-            success: function(response) {
-                console.log('Employee data updated successfully:', response);
-                $updateRow.response();
-            }
-        });
-    });
-
-
-    $('#table').on('click', '.edit', function() {
-        var employeeId = $(this).data('id');
-        $.ajax({
-            url: 'http://localhost:3000/data/' + employeeId,
-            type: 'GET',
-            success: function(employee) {
-                populateForm(employee); 
-                $('#table').data('id', employeeId);
-            }
-        });
-    });
-
-    function populateForm(employee) {
-        $('#name').val(employee.Name);
-        $('#male').val(employee.Gender);
-        $('#department').val(employee.Department);
-        $('#salary').val(employee.Salary);
-        $('#date').val(employee.Start_Date);
-    }
+$('#table').on('mouseover', '.delete', function() {
+    $(this).css('cursor', 'pointer');
+    $(this).fadeTo('fast', 0.7);
 });
+$('#table').on('mouseout', '.delete', function() {
+    $(this).fadeTo('fast', 1); 
+});
+
+//PUT Method
+$('#table').on('click', '.edit', function() {
+    var employeeID = $(this).data('id');
+    var $row = $(this).closest('tr');
+  
+    // Get existing table cell elements before redirecting
+    var $nameCell = $row.find('#name');
+    var $genderCell = $row.find('#gender');
+    var $salaryCell = $row.find('#salary');
+    var $departmentCell = $row.find('#department');
+    var $startdateCell = $row.find('#date');
+  
+    
+    var originalName = $nameCell.text();
+    var originalGender = $genderCell.text();
+    var originalSalary = parseFloat($salaryCell.text());
+    var originalDepartment = $departmentCell.text();
+    var originalStartdate = $startdateCell.text();
+  
+    // Collect updated data on redirection
+    window.location.href = 'http://127.0.0.1:5501/pages/index.html?id=' + employeeID;
+  
+    // Handle successful update on return
+    window.onpopstate = function(event) {
+      if (event.state && event.state.updatedData) {
+        var updatedData = event.state.updatedData;
+  
+        // Update table cell content
+        $nameCell.text(updatedData.Name); // Use updated or original
+        $genderCell.text(updatedData.Gender);
+        $salaryCell.text(updatedData.Salary); // Use updated or original
+        $departmentCell.text(updatedData.Department);
+        $startdateCell.text(updatedData.Start_Date);
+  
+        // Clear the update state to prevent subsequent updates
+        history.replaceState({}, '', window.location.pathname);
+      }
+    };
+  
+    // Send PUT request using AJAX
+    $.ajax({
+      url: 'http://localhost:3000/data/' + employeeID,
+      type: 'PUT',
+      data: JSON.stringify({
+      }),
+      contentType: 'application/json',
+      success: function(response) {
+        console.log('Item updated successfully:', response);
+        history.pushState({ updatedData: updatedData }, '', window.location.href);
+      },
+      error: function(xhr, status, error) {
+        console.error('Error updating item:', xhr.responseText);
+      }
+    });
+  });
+  

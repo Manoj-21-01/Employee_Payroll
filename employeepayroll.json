@@ -1,38 +1,59 @@
 {
   "data": [
     {
-      "id": "f8ce",
-      "Name": "lalith",
-      "Gender": "Male",
-      "Department": [
-        "Engineer"
-      ],
-      "Salary": "50k",
-      "Start_Date": "2024-03-02",
-      "Notes": "Notes hello this is lalith"
-    },
-    {
-      "id": "db3b",
+      "id": "8045",
       "Name": "Punith",
       "Gender": "Male",
       "Department": [
         "HR"
       ],
       "Salary": "30k",
-      "Start_Date": "2024-03-05",
-      "Notes": "notes"
+      "Start_Date": "2024-03-07",
+      "Notes": "Note"
     },
     {
-      "id": "e0a1",
-      "Name": "Harshit",
+      "id": "019a",
+      "Name": "manoj",
       "Gender": "Male",
       "Department": [
-        "Finance",
-        "Engineer"
+        "HR"
       ],
-      "Salary": "50k",
-      "Start_Date": "2024-02-20",
-      "Notes": "Note"
+      "Salary": "30k",
+      "Start_Date": "2024-02-28",
+      "Notes": ""
+    },
+    {
+      "id": "9f92",
+      "Name": "Manikanta",
+      "Gender": "Female",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "60k",
+      "Start_Date": "2024-02-28",
+      "Notes": ""
+    },
+    {
+      "id": "e11f",
+      "Name": "lalith",
+      "Gender": "Female",
+      "Department": [
+        "Finance"
+      ],
+      "Salary": "60k",
+      "Start_Date": "2024-03-07",
+      "Notes": ""
+    },
+    {
+      "id": "2f56",
+      "Name": "harshit",
+      "Gender": "Male",
+      "Department": [
+        "HR"
+      ],
+      "Salary": "40k",
+      "Start_Date": "2024-02-28",
+      "Notes": ""
     }
   ]
 }
